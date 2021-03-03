@@ -1,0 +1,23 @@
+.footer {
+  background-color: $light-gray;
+}
+
+.footer__inner {
+  max-width: 1205px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    padding-right: 46px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 25px 0 30px;
+  }
+}

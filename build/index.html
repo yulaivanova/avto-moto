@@ -10,6 +10,7 @@
   <link rel="preload" href="fonts/open-sans-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/open-sans-semi-bold-600.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/open-sans-bold-700.woff2" as="font" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
 </head>
 <body>
   <div class="wrapper">
@@ -35,7 +36,27 @@
     </header>
     <main>
       <section class="product-card">
-        <div class="product-card__slider"></div>
+        <div class="product-card__slider">
+          <div class="swiper-container slider__gallery-top">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slider__item slider__item--1"></div>
+              <div class="swiper-slide slider__item slider__item--2"></div>
+              <div class="swiper-slide slider__item slider__item--3"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="slider__button slider__button--next">
+            </div>
+            <div class="slider__button slider__button--prev">
+            </div>
+          </div>
+          <div class="swiper-container slider__gallery-thumbs">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slider__item slider__item--1"></div>
+              <div class="swiper-slide slider__item slider__item--2"></div>
+              <div class="swiper-slide slider__item slider__item--3"></div>
+            </div>
+          </div>
+        </div>
         <div class="product-card__description">
           <h1>Марпех 11</h1>
           <ul class="features">
@@ -230,6 +251,7 @@
       </div>
     </footer>
   </div>
+  <script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

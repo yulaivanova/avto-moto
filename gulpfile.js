@@ -106,7 +106,7 @@ gulp.task("vendor-scripts", function () {
 });
 
 gulp.task("main-scripts", function () {
-  return gulp.src(["source/js/menu.js", "source/js/map.js", "source/js/slider.js"])
+  return gulp.src(["source/js/menu.js", "source/js/map.js", "source/js/slider.js", "source/js/tabs.js"])
     .pipe(concat("main.js"))
     .pipe(gulp.dest("build/js"));
 });

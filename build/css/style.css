@@ -905,7 +905,8 @@ template {
   background-image: url("../img/arrow-icon.svg"); }
 
 .swiper-button-disabled {
-  opacity: 0.5; }
+  opacity: 0.5;
+  cursor: default; }
 
 .tabs-nav {
   display: -webkit-box;
@@ -936,6 +937,30 @@ template {
 
 .tabs__characteristic {
   padding-top: 10px; }
+
+.tabs__item {
+  display: none;
+  z-index: 99;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (max-width: 1023px) {
+    .tabs__item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.tabs__item--is-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .reviews {
   position: relative; }

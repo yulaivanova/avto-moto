@@ -4,7 +4,7 @@
   padding: 90px 21px 140px;
 
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 600px 1fr;
   column-gap: 57px;
   row-gap: 90px;
 
@@ -17,17 +17,26 @@
 
   @media (max-width: $mobile-width) {
     padding: 20px 16px 40px;
+    row-gap: 25px;
   }
 }
 
 .product-card__slider {
-  width: 600px;
-  height: 500px;
+  width: 100%;
+  min-height: 494px;
 
   grid-column: 1/2;
 
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    width: 726px;
+    margin: 0 auto;
+  }
+
   @media (max-width: $mobile-width) {
-    width: 100%;
+    width: 288px;
+    min-height: auto;
   }
 }
 

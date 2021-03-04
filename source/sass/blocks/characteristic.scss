@@ -1,0 +1,26 @@
+.characteristic__table {
+  min-width: 565px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: auto;
+  }
+}
+
+.characteristic__row td{
+  border-bottom: 1px solid #D7D9DF;
+  padding-top: 20px;
+  padding-bottom: 8px;
+
+  &:nth-child(2n) {
+    text-align: right;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 24px;
+    padding-bottom: 11px;
+  }
+}

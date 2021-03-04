@@ -1,0 +1,17 @@
+.button {
+  box-sizing: border-box;
+  padding: 16px 20px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button--red {
+  color: $white;
+  background-color: $btn-color;
+}
+
+.button--white {
+  border: 1px solid $btn-color;
+  color: $btn-color;
+}

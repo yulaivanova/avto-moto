@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Avto moto">
+  <title>Avto moto</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/open-sans-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/open-sans-semi-bold-600.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/open-sans-bold-700.woff2" as="font" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <!-- 1х: 134px; 2x: 268px -->
+          <picture>
+            <source type="image/webp" srcset="img/logo@1x.webp 1x, img/logo@2x.webp 2x">
+            <img src="img/logo@1x.png" srcset="img/logo@2x.png" alt="Avto moto logo" width="134" height="55">
+          </picture>
+        </a>
+        <nav class="site-nav site-nav--opened site-nav--nojs">
+          <button class="site-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a href="#" class="site-nav__link">Автомобили</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">Контакты</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">Услуги</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">Вакансии</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="popup popup--nojs">
+        <div class="popup__wrapper">
+          <button class="popup__toggle" type="button" tabindex="6"><span class="visually-hidden">Закрыть окно</span></button>
+          <h2>Оставить отзыв</h2>
+          <form action="#">
+            <fieldset class="popup__fieldset fieldset">
+              <div class="fieldset__column">
+                <div class="fieldset__field">
+                  <span class="fieldset__input-error">Пожалуйста, заполните поле</span>
+                  <label for="name" class="visually-hidden">Оставьте ваше имя</label>
+                  <input type="text" name="name" placeholder="Имя" minlength="2" id="name" tabindex="1" required="">
+                </div>
+                <div class="fieldset__field">
+                  <label for="pros" class="visually-hidden">Опишите достоинства</label>
+                  <input type="text" name="pros" placeholder="Достоинства" minlength="2" id="pros" tabindex="2">
+                </div>
+                <div class="fieldset__field">
+                  <label for="cons" class="visually-hidden">Опишите недостатки</label>
+                  <input type="text" name="cons" placeholder="Недостатки" minlength="2" id="cons" tabindex="3">
+                </div>
+              </div>
+              <div class="fieldset__column">
+                <fieldset class="fieldset__rating">
+                  <span>Оцените товар:</span>
+                  <input type="radio" id="star-5" name="rating" value="5">
+                  <label for="star-5" title="Оценка «5»"></label>
+                  <input type="radio" id="star-4" name="rating" value="4">
+                  <label for="star-4" title="Оценка «4»"></label>
+                  <input type="radio" id="star-3" name="rating" value="3">
+                  <label for="star-3" title="Оценка «3»"></label>
+                  <input type="radio" id="star-2" name="rating" value="2">
+                  <label for="star-2" title="Оценка «2»"></label>
+                  <input type="radio" id="star-1" name="rating" value="1">
+                  <label for="star-1" title="Оценка «1»"></label>
+                </fieldset>
+                <div class="fieldset__field">
+                  <span class="fieldset__input-error">Пожалуйста, заполните поле</span>
+                  <label for="comment" class="visually-hidden">Оставьте ваш комментарий</label>
+                  <textarea id="comment" rows="6" placeholder="Комментарий" tabindex="3" minlength="10" required=""></textarea>
+                </div>
+              </div>
+            </fieldset>
+            <button class="popup__button button button--red" type="submit" tabindex="4">Отправить вопрос</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <nav class="footer__footer-nav footer-nav">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Корпоративным клиентам</a></li>
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Клиентам</a></li>
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Аренда авто</a></li>
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Каршеринг</a></li>
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Как продать авто</a></li>
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Traid-in</a></li>
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Test draiv</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

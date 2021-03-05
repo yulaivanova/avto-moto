@@ -1,4 +1,4 @@
-.contacts {
+.contacts__wrapper {
   display: flex;
   flex-direction: row;
 
@@ -40,7 +40,6 @@
   &.webp {
     background-image: url("../img/map-desktop@1x.webp");
   }
-
 
   @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
     background-image: url("../img/map-desktop@2x.jpg");

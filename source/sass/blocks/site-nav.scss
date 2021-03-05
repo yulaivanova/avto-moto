@@ -27,6 +27,14 @@
     margin-right: 0;
     padding: 20px 0;
     width: 100%;
+
+    text-align: center;
+
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
 
@@ -42,11 +50,12 @@
   @media (max-width: $tablet-width) {
     position: absolute;
     top: -50px;
-    right: 3px;
+    right: 21px;
 
     display: block;
     width: 35px;
     height: 35px;
+
     background-color: $light-gray;
     cursor: pointer;
     border: none;
@@ -88,6 +97,7 @@
     right: 5px;
     width: 25px;
     height: 2px;
+
     background-color: $text-color;
   }
 

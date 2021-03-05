@@ -5,16 +5,12 @@
 .tabs__item {
   display: none;
   z-index: 99;
-
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-between;
-
-  @media (max-width: $tablet-width) {
-    flex-direction: column;
-  }
 }
 
 .tabs__item--is-active {
-  display: flex;
+  display: block;
+}
+
+.tabs--nojs .tabs__item {
+  display: block;
 }

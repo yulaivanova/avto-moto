@@ -100,7 +100,7 @@
             <div class="tabs-nav__item" data-tab-name="reviews" tabindex="0">Отзывы</div>
             <div class="tabs-nav__item" data-tab-name="contacts" tabindex="0">Контакты</div>
           </div>
-          <div class="tabs tabs--nojs">
+          <div class="tabs">
             <div class="tabs__item tabs__item--is-active characteristic">
               <div class="haracteristic__wrapper">
                 <table class="characteristic__table">
@@ -141,7 +141,7 @@
             </div>
             <div class="tabs__item reviews">
               <div class="reviews__wrapper">
-                <a href="popup.html" class="reviews__button button button--white">оставить отзыв</a>
+                <a href="#" class="reviews__button button button--white">оставить отзыв</a>
                 <ul class="reviews__list">
                   <li class="reviews__item">
                     <h2>Борис Иванов</h2>
@@ -222,14 +222,12 @@
                   </li>
                   <li class="contacts__item contacts__item--email">
                     <h3>E-mail</h3>
-                    <a class="contacts__link"
-                      href="info@avto-moto.ru">info@avto-moto.ru</a>
+                    <a class="contacts__link" href="info@avto-moto.ru">info@avto-moto.ru</a>
                   </li>
                 </ul>
                 <div class="contacts__map" id="map">
                   <span class="visually-hidden">Карта</span>
-                  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e8de7724-4389-4305-9e95-dcaf82fd0420"
-                    type="text/javascript"></script>
+                  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e8de7724-4389-4305-9e95-dcaf82fd0420" type="text/javascript"></script>
                 </div>
               </div>
             </div>
@@ -246,7 +244,7 @@
                 <div class="fieldset__field">
                   <span class="fieldset__input-error">Пожалуйста, заполните поле</span>
                   <label for="name" class="visually-hidden">Оставьте ваше имя</label>
-                  <input type="text" name="name" placeholder="Имя" minlength="2" id="name" tabindex="1" required>
+                  <input type="text" name="name" placeholder="Имя" minlength="2" id="name" tabindex="1" required="">
                 </div>
                 <div class="fieldset__field">
                   <label for="pros" class="visually-hidden">Опишите достоинства</label>
@@ -274,7 +272,7 @@
                 <div class="fieldset__field">
                   <span class="fieldset__input-error">Пожалуйста, заполните поле</span>
                   <label for="comment" class="visually-hidden">Оставьте ваш комментарий</label>
-                  <textarea id="comment" rows="6" placeholder="Комментарий" tabindex="3" minlength="10" required></textarea>
+                  <textarea id="comment" rows="6" placeholder="Комментарий" tabindex="3" minlength="10" required=""></textarea>
                 </div>
               </div>
             </fieldset>

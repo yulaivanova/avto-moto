@@ -95,14 +95,14 @@
           </div>
         </div>
         <div class="product-card__tabs-block">
-          <div class="tabs-block__nav tabs-nav">
-            <div class="tabs-nav__item tabs-nav__item--is-active" data-tab-name="desc" tabindex="0">Характеристики</div>
-            <div class="tabs-nav__item" data-tab-name="review" tabindex="0">Отзывы</div>
-            <div class="tabs-nav__item" data-tab-name="contact" tabindex="0">Контакты</div>
+          <div class="tabs-nav">
+            <div class="tabs-nav__item tabs-nav__item--is-active" data-tab-name="characteristic" tabindex="0">Характеристики</div>
+            <div class="tabs-nav__item" data-tab-name="reviews" tabindex="0">Отзывы</div>
+            <div class="tabs-nav__item" data-tab-name="contacts" tabindex="0">Контакты</div>
           </div>
-          <div class="tabs-block__content tabs">
-            <div class="tabs__item tabs__item--is-active desc">
-              <div class="tabs__characteristic characteristic">
+          <div class="tabs tabs--nojs">
+            <div class="tabs__item tabs__item--is-active characteristic">
+              <div class="haracteristic__wrapper">
                 <table class="characteristic__table">
                     <tr class="characteristic__row">
                       <td>Трансмиссия</td>
@@ -139,9 +139,9 @@
                 </table>
               </div>
             </div>
-            <div class="tabs__item review">
-              <div class="tabs__reviews reviews">
-                <a href="#" class="reviews__button button button--white">оставить отзыв</a>
+            <div class="tabs__item reviews">
+              <div class="reviews__wrapper">
+                <a href="popup.html" class="reviews__button button button--white">оставить отзыв</a>
                 <ul class="reviews__list">
                   <li class="reviews__item">
                     <h2>Борис Иванов</h2>
@@ -204,8 +204,8 @@
                 </ul>
               </div>
             </div>
-            <div class="tabs__item contact">
-              <div class="tabs__contacts contacts">
+            <div class="tabs__item contacts">
+              <div class="contacts__wrapper">
                 <ul class="contacts__list">
                   <li class="contacts__item">
                     <h3>Адрес</h3>
@@ -232,6 +232,52 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="popup">
+        <div class="popup__wrapper">
+          <button class="popup__toggle" type="button" tabindex="6"><span class="visually-hidden">Закрыть окно</span></button>
+          <h2>Оставить отзыв</h2>
+          <form action="#">
+            <fieldset class="popup__fieldset fieldset">
+              <div class="fieldset__column">
+                <div class="fieldset__field">
+                  <span class="fieldset__input-error">Пожалуйста, заполните поле</span>
+                  <label for="name" class="visually-hidden">Оставьте ваше имя</label>
+                  <input type="text" name="name" placeholder="Имя" minlength="2" id="name" tabindex="1" required="">
+                </div>
+                <div class="fieldset__field">
+                  <label for="pros" class="visually-hidden">Опишите достоинства</label>
+                  <input type="text" name="pros" placeholder="Достоинства" minlength="2" id="pros" tabindex="2">
+                </div>
+                <div class="fieldset__field">
+                  <label for="cons" class="visually-hidden">Опишите недостатки</label>
+                  <input type="text" name="cons" placeholder="Недостатки" minlength="2" id="cons" tabindex="3">
+                </div>
+              </div>
+              <div class="fieldset__column">
+                <fieldset class="fieldset__rating">
+                  <span>Оцените товар:</span>
+                  <input type="radio" id="star-5" name="rating" value="5">
+                  <label for="star-5" title="Оценка «5»"></label>
+                  <input type="radio" id="star-4" name="rating" value="4">
+                  <label for="star-4" title="Оценка «4»"></label>
+                  <input type="radio" id="star-3" name="rating" value="3">
+                  <label for="star-3" title="Оценка «3»"></label>
+                  <input type="radio" id="star-2" name="rating" value="2">
+                  <label for="star-2" title="Оценка «2»"></label>
+                  <input type="radio" id="star-1" name="rating" value="1">
+                  <label for="star-1" title="Оценка «1»"></label>
+                </fieldset>
+                <div class="fieldset__field">
+                  <span class="fieldset__input-error">Пожалуйста, заполните поле</span>
+                  <label for="comment" class="visually-hidden">Оставьте ваш комментарий</label>
+                  <textarea id="comment" rows="6" placeholder="Комментарий" tabindex="3" minlength="10" required=""></textarea>
+                </div>
+              </div>
+            </fieldset>
+            <button class="popup__button button button--red" type="submit" tabindex="4">Отправить вопрос</button>
+          </form>
         </div>
       </section>
     </main>

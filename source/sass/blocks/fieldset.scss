@@ -1,10 +1,12 @@
 .fieldset {
-  padding: 0;
   border: none;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
@@ -31,9 +33,10 @@
   overflow: hidden;
 
   border: none;
-  padding: 0;
 
-  margin-bottom: 30px;
+  padding: 7px 0 0 0;
+  margin-bottom: 29px;
+  margin-left: 0;
 
   @media (max-width: $mobile-width) {
     margin: 25px auto 32px;
@@ -48,7 +51,7 @@
 
   color: #000000;
 
-  padding-right: 14px;
+  padding-right: 0;
 
   order: 1;
 
@@ -64,58 +67,96 @@
   }
 }
 
+.fieldset__rating label:hover::before {
+  opacity: 0.5;
+}
+
+.fieldset__rating label:focus::before {
+  color: $btn-red-hvr;
+  opacity: 0.8;
+}
+
 .fieldset__rating:not(:checked) > input {
-	display: none;
+  display: none;
 }
+
 .fieldset__rating:not(:checked) > label {
-	float: right;
-	width: 31px;
-	padding: 0;
-	cursor: pointer;
-	font-size: 27px;
-	line-height: 27px;
-	color: rgba(189, 190, 194, 0.7);
+  float: right;
+
+  margin-right: 10px;
+  padding: 0;
+
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 27px;
+  color: rgba(189, 190, 194, 0.7);
+
+  &:first-of-type {
+    margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 31px;
+    margin-right: 0;
+  }
 }
-.fieldset__rating:not(:checked) > label:before {
-	content: '★';
+
+.fieldset__rating:not(:checked) > label::before {
+  content: "★";
 }
+
 .fieldset__rating > input:checked ~ label {
-	color: $btn-color;
+  color: $btn-color;
 }
+
 .fieldset__rating:not(:checked) > label:hover,
+.fieldset__rating:not(:checked) > label:focus ~ label,
 .fieldset__rating:not(:checked) > label:hover ~ label {
-	color: $btn-color;
+  color: $btn-color;
 }
+
 .fieldset__rating > input:checked + label:hover,
 .fieldset__rating > input:checked + label:hover ~ label,
 .fieldset__rating > input:checked ~ label:hover,
 .fieldset__rating > input:checked ~ label:hover ~ label,
 .fieldset__rating > label:hover ~ input:checked ~ label {
-	color: $btn-color;
+  color: $btn-color;
 }
+
 .fieldset__rating > label:active {
-	position: relative;
+  position: relative;
+}
+
+.fieldset__rating > label:focus {
+  outline: none;
 }
 
 .fieldset__field input,
 .fieldset__field textarea {
   width: 100%;
 
-  padding: 15px 0 15px 25px;
+  padding: 15px 10px 15px 22px;
 
   box-sizing: border-box;
-  background-color: #FFFFFF;
+  background-color: $white;
   border: 1px solid rgba(72, 73, 77, 0.2);
 
   position: relative;
 
+  &::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #48494d;
+  }
+
   &:invalid {
-    border: 1px solid #FF0000;
+    border: 1px solid #ff0000;
   }
 }
 
 .fieldset__field textarea {
-  max-height: 118px;
+  min-height: 118px;
 
   resize: none;
 }
@@ -133,9 +174,9 @@
   font-size: 14px;
   line-height: 19px;
 
-  color: #FF0000;
+  color: #ff0000;
 
-  margin-top: -20px;
+  margin-top: -24px;
   padding-bottom: 3px;
 }
 

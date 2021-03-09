@@ -1,13 +1,15 @@
 .footer {
   background-color: $light-gray;
+
   margin-top: auto;
 }
 
 .footer__inner {
   max-width: 1205px;
   box-sizing: border-box;
+
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 20px 5px;
 
   display: flex;
   flex-direction: row;
@@ -15,7 +17,7 @@
   align-items: center;
 
   @media (max-width: $tablet-width) {
-    padding-right: 46px;
+    padding: 24px 46px 36px 21px;
   }
 
   @media (max-width: $mobile-width) {

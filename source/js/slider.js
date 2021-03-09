@@ -1,10 +1,14 @@
 'use strict';
 (function () {
-  var galleryThumbs = new Swiper('.slider__gallery-thumbs', {
+  const SLIDER = document.querySelector('.slider');
+
+  SLIDER.classList.remove('slider--nojs');
+
+  let galleryThumbs = new Swiper('.slider__gallery-thumbs', {
     spaceBetween: 25,
     slidesPerView: 3,
   });
-  var galleryTop = new Swiper('.slider__gallery-top', {
+  let galleryTop = new Swiper('.slider__gallery-top', {
     spaceBetween: 10,
     navigation: {
       nextEl: '.slider__button--next',
@@ -16,4 +20,5 @@
       },
     },
   });
+
 })();

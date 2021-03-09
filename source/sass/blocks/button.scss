@@ -1,19 +1,39 @@
 .button {
   box-sizing: border-box;
-  padding: 16px 20px;
+  padding: 16px 0 17px 21px;
 
   text-transform: uppercase;
   text-decoration: none;
 
   cursor: pointer;
+
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
 }
 
 .button--red {
   color: $white;
   background-color: $btn-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $btn-red-hvr;
+  }
 }
 
 .button--white {
   border: 1px solid $btn-color;
   color: $btn-color;
+
+  padding: 15px 0 16px 21px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $btn-color;
+    color: $white;
+  }
 }

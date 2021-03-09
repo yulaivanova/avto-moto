@@ -1,3 +1,6 @@
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
 'use strict';
 (function () {
   const MAX_RAITING = 5;
@@ -5,26 +8,25 @@
 
   const generateRating = function (raitingValue) {
     let ratingElem = '';
-    for (var i = 0; i < MAX_RAITING; i++) {
+    for (let i = 0; i < MAX_RAITING; i++) {
       if (i < raitingValue) {
-        ratingElem += `<span class="rating__active"></span>`
+        ratingElem += `<span class="rating__active"></span>`;
       } else {
         ratingElem += `<span></span>`;
-      };
-    };
+      }
+    }
 
     if (raitingValue <= 2) {
       ratingElem += `<span>Не советует</span>`;
     } else {
-      ratingElem += `<span>Cоветует</span>`
+      ratingElem += `<span>Cоветует</span>`;
     }
 
     return ratingElem;
   };
 
-
   const generateReviewCard = (data, raiting) => {
-    const { name, pros, cons, comment } = data;
+    const {name, pros, cons, comment} = data;
     let raitingElem = generateRating(raiting);
     let date = new Date().toLocaleString();
 
@@ -57,4 +59,5 @@
   window.review = {
     generate: generateReviewCard,
   };
+
 })();

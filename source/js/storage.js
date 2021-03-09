@@ -9,12 +9,14 @@
   let storagePros = '';
   let storageCons = '';
   let storageComment = '';
+  let storageRaitng = '';
 
   try {
     storageName = localStorage.getItem('userName');
     storageCons = localStorage.getItem('cons');
     storagePros = localStorage.getItem('pros');
     storageComment = localStorage.getItem('comment');
+    storageRaitng = localStorage.getItem('raitingValue');
   } catch (err) {
     isStorageSupport = false;
   }
@@ -25,6 +27,7 @@
     cons: storageCons,
     pros: storagePros,
     comment: storageComment,
+    raitingValue: storageRaitng,
   };
 
 })();

@@ -1,26 +1,32 @@
 .rating {
-	width: 265px;
+  width: 265px;
 }
+
 .rating span {
-	padding: 0;
-	font-size: 16px;
-	margin: 0 2px;
-	line-height: 1;
-	color: rgba(189, 190, 194, 0.7);
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(189, 190, 194, 0.7);
+
+  margin: 0 1px;
+  padding: 0;
 }
-.rating > span:before {
-	content: '★';
+
+.rating > span::before {
+  content: "★";
 }
+
 .rating > span.rating__active {
-	color: $btn-color;
+  color: $btn-color;
 }
 
 .rating span:last-of-type {
   font-size: 15px;
   line-height: 20px;
-  color: #D12136;
+  color: $btn-color;
 
-  padding-left: 20px;
+  padding-left: 12px;
+
+  vertical-align: bottom;
 }
 
 .rating span:last-of-type::before {

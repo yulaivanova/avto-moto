@@ -1,12 +1,18 @@
 .characteristic {
   padding-top: 10px;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 0;
+  }
 }
 
 .characteristic__table {
-  min-width: 565px;
+  min-width: 569px;
 
   @media (max-width: $tablet-width) {
     width: 100%;
+
+    padding-top: 17px;
   }
 
   @media (max-width: $mobile-width) {
@@ -14,17 +20,33 @@
   }
 }
 
-.characteristic__row td{
-  border-bottom: 1px solid #D7D9DF;
+.characteristic__row td {
+  border-bottom: 1px solid #d7d9df;
   padding-top: 20px;
-  padding-bottom: 8px;
+  padding-bottom: 5px;
+
+  color: #48494d;
 
   &:nth-child(2n) {
     text-align: right;
+
+    @media (max-width: $mobile-width) {
+      font-weight: 600;
+      color: #48494d;
+    }
   }
 
   @media (max-width: $tablet-width) {
-    padding-top: 24px;
+    padding-top: 23px;
     padding-bottom: 11px;
+    padding-left: 0;
+
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 26px;
+    padding-bottom: 9px;
   }
 }

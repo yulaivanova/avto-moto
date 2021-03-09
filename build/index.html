@@ -10,7 +10,6 @@
   <link rel="preload" href="fonts/open-sans-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/open-sans-semi-bold-600.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/open-sans-bold-700.woff2" as="font" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
 </head>
 <body>
   <div class="wrapper">
@@ -36,14 +35,13 @@
     </header>
     <main>
       <section class="product-card">
-        <div class="product-card__slider slider">
+        <div class="product-card__slider slider slider--nojs">
           <div class="swiper-container slider__gallery-top">
             <div class="swiper-wrapper">
               <div class="swiper-slide slider__item slider__item--1"></div>
               <div class="swiper-slide slider__item slider__item--2"></div>
               <div class="swiper-slide slider__item slider__item--3"></div>
             </div>
-            <!-- Add Arrows -->
             <div class="slider__button slider__button--next">
             </div>
             <div class="slider__button slider__button--prev">
@@ -90,8 +88,8 @@
             <span>2 400 000 ₽</span>
           </div>
           <div class="product-card__btn-wrapper">
-            <a href="" class="product-card__button button button--red">оставить заявку</a>
-            <a href="" class="product-card__button button button--white">В КРЕДИТ ОТ 11 000 ₽</a>
+            <a href="#" class="product-card__button button button--red">оставить заявку</a>
+            <a href="#" class="product-card__button button button--white">В КРЕДИТ ОТ 11 000 ₽</a>
           </div>
         </div>
         <div class="product-card__tabs-block">
@@ -102,46 +100,42 @@
           </div>
           <div class="tabs tabs--nojs">
             <div class="tabs__item tabs__item--is-active characteristic">
-              <div class="haracteristic__wrapper">
-                <table class="characteristic__table">
-                    <tr class="characteristic__row">
-                      <td>Трансмиссия</td>
-                      <td>Роботизированная</td>
-                    </tr>
-                    <tr class="characteristic__row">
-                      <td>Мощность двигателя, л.с.</td>
-                      <td>249</td>
-                    </tr>
-                    <tr class="characteristic__row">
-                      <td>Мощность двигателя, л.с.</td>
-                      <td>249</td>
-                    </tr>
-                    <tr class="characteristic__row">
-                      <td>Тип двигателя</td>
-                      <td>Бензиновый</td>
-                    </tr>
-                    <tr class="characteristic__row">
-                      <td>Привод</td>
-                      <td>Полный</td>
-                    </tr>
-                    <tr class="characteristic__row">
-                      <td>Объем двигателя, л</td>
-                      <td>2.4</td>
-                    </tr>
-                    <tr class="characteristic__row">
-                      <td>Макс. крутящий момент</td>
-                      <td>370/4500</td>
-                    </tr>
-                    <tr class="characteristic__row">
-                      <td>Количество цилиндров</td>
-                      <td>4</td>
-                    </tr>
-                </table>
-              </div>
+              <h2 class="visually-hidden">Характеристики</h2>
+              <table class="characteristic__table">
+                  <tr class="characteristic__row">
+                    <td>Трансмиссия</td>
+                    <td>Роботизированная</td>
+                  </tr>
+                  <tr class="characteristic__row">
+                    <td>Мощность двигателя, л.с.</td>
+                    <td>249</td>
+                  </tr>
+                  <tr class="characteristic__row">
+                    <td>Тип двигателя</td>
+                    <td>Бензиновый</td>
+                  </tr>
+                  <tr class="characteristic__row">
+                    <td>Привод</td>
+                    <td>Полный</td>
+                  </tr>
+                  <tr class="characteristic__row">
+                    <td>Объем двигателя, л</td>
+                    <td>2.4</td>
+                  </tr>
+                  <tr class="characteristic__row">
+                    <td>Макс. крутящий момент</td>
+                    <td>370/4500</td>
+                  </tr>
+                  <tr class="characteristic__row">
+                    <td>Количество цилиндров</td>
+                    <td>4</td>
+                  </tr>
+              </table>
             </div>
             <div class="tabs__item reviews">
               <div class="reviews__wrapper">
                 <a href="popup.html" class="reviews__button button button--white">оставить отзыв</a>
+                <h2 class="visually-hidden">Отзывы</h2>
                 <ul class="reviews__list">
                   <li class="reviews__item">
                     <h2>Борис Иванов</h2>
@@ -155,9 +149,8 @@
                     </div>
                     <div class="reviews__comment">
                       <h3 class="reviews__title">Комментарий</h3>
-                      <p>Дизайн отличный, управление просто шикарно, ощущения за рулём такой машины особые. Но ремонт очень дорогой. Пару месяцев
-                      назад пришлось менять двигатель. По стоимости вышло как новый автомобиль. Так что, если покупать эту машину, надо быть
-                      готовым к большим расходам на обслуживание.</p>
+                      <p>Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по базовым характеристикам. Не думал, что
+                      пересяду на китайский автопром, но сейчас гоняю и понимаю, что полностью доволен.</p>
                     </div>
                     <div class="reviews__rating rating">
                       <span class="rating__active"></span>
@@ -206,11 +199,12 @@
             </div>
             <div class="tabs__item contacts">
               <div class="contacts__wrapper">
+                <h2 class="visually-hidden">Контактная информация</h2>
                 <ul class="contacts__list">
                   <li class="contacts__item">
                     <h3>Адрес</h3>
                     <p>Санкт-Петербург,
-                    набережная реки Карповки, дом 5</p>
+                    <span>набережная реки Карповки, дом 5</span></p>
                   </li>
                   <li class="contacts__item contacts__item--time">
                     <h3>Режим работы</h3>
@@ -227,7 +221,7 @@
                 </ul>
                 <div class="contacts__map" id="map">
                   <span class="visually-hidden">Карта</span>
-                  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e8de7724-4389-4305-9e95-dcaf82fd0420" type="text/javascript"></script>
+                  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e8de7724-4389-4305-9e95-dcaf82fd0420"></script>
                 </div>
               </div>
             </div>
@@ -236,7 +230,7 @@
       </section>
       <section class="popup">
         <div class="popup__wrapper">
-          <button class="popup__toggle" type="button" tabindex="6"><span class="visually-hidden">Закрыть окно</span></button>
+          <button class="popup__toggle" type="button" tabindex="12"><span class="visually-hidden">Закрыть окно</span></button>
           <h2>Оставить отзыв</h2>
           <form action="#">
             <fieldset class="popup__fieldset fieldset">
@@ -256,27 +250,27 @@
                 </div>
               </div>
               <div class="fieldset__column">
-                <fieldset class="fieldset__rating">
+                <fieldset class="fieldset__rating" tabindex="4">
                   <span>Оцените товар:</span>
-                  <input type="radio" id="star-5" name="rating" value="5">
-                  <label for="star-5" title="Оценка «5»"></label>
+                  <input type="radio" id="star-5" name="rating" value="5" tabindex="5">
+                  <label for="star-5" title="Оценка «5»" tabindex="9" data-raiting="star-5"><span class="visually-hidden">Оценка «5»</span></label>
                   <input type="radio" id="star-4" name="rating" value="4">
-                  <label for="star-4" title="Оценка «4»"></label>
+                  <label for="star-4" title="Оценка «4»" tabindex="8" data-raiting="star-4"><span class="visually-hidden">Оценка «4»</span></label>
                   <input type="radio" id="star-3" name="rating" value="3">
-                  <label for="star-3" title="Оценка «3»"></label>
+                  <label for="star-3" title="Оценка «3»" tabindex="7" data-raiting="star-3"><span class="visually-hidden">Оценка «3»</span></label>
                   <input type="radio" id="star-2" name="rating" value="2">
-                  <label for="star-2" title="Оценка «2»"></label>
+                  <label for="star-2" title="Оценка «2»" tabindex="6" data-raiting="star-2"><span class="visually-hidden">Оценка «2»</span></label>
                   <input type="radio" id="star-1" name="rating" value="1">
-                  <label for="star-1" title="Оценка «1»"></label>
+                  <label for="star-1" title="Оценка «1»" tabindex="5" data-raiting="star-1"><span class="visually-hidden">Оценка «1»</span></label>
                 </fieldset>
                 <div class="fieldset__field">
                   <span class="fieldset__input-error">Пожалуйста, заполните поле</span>
                   <label for="comment" class="visually-hidden">Оставьте ваш комментарий</label>
-                  <textarea id="comment" rows="6" placeholder="Комментарий" tabindex="3" minlength="10" required=""></textarea>
+                  <textarea id="comment" rows="4" placeholder="Комментарий" tabindex="10" minlength="10" required=""></textarea>
                 </div>
               </div>
             </fieldset>
-            <button class="popup__button button button--red" type="submit" tabindex="4">Отправить вопрос</button>
+            <button class="popup__button button button--red" type="submit" tabindex="11">Отправить вопрос</button>
           </form>
         </div>
       </section>

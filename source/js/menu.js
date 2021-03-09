@@ -1,21 +1,24 @@
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
 'use strict';
 (function () {
 
-let navMain = document.querySelector('.site-nav');
-let navToggle = document.querySelector('.site-nav__toggle');
+  const NAV_MAIN = document.querySelector('.site-nav');
+  const NAV_TOGGLE = document.querySelector('.site-nav__toggle');
 
-navMain.classList.remove('site-nav--nojs');
-navMain.classList.remove('site-nav--opened');
-navMain.classList.add('site-nav--closed');
+  NAV_MAIN.classList.remove('site-nav--nojs');
+  NAV_MAIN.classList.remove('site-nav--opened');
+  NAV_MAIN.classList.add('site-nav--closed');
 
-navToggle.addEventListener('click', function () {
-  if (navMain.classList.contains('site-nav--closed')) {
-    navMain.classList.remove('site-nav--closed');
-    navMain.classList.add('site-nav--opened');
-  } else {
-    navMain.classList.add('site-nav--closed');
-    navMain.classList.remove('site-nav--opened');
-  }
-});
+  NAV_TOGGLE.addEventListener('click', function () {
+    if (NAV_MAIN.classList.contains('site-nav--closed')) {
+      NAV_MAIN.classList.remove('site-nav--closed');
+      NAV_MAIN.classList.add('site-nav--opened');
+    } else {
+      NAV_MAIN.classList.add('site-nav--closed');
+      NAV_MAIN.classList.remove('site-nav--opened');
+    }
+  });
 
 })();

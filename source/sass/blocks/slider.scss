@@ -198,8 +198,11 @@
   opacity: 0.5;
   cursor: default;
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover,
-  &:focus,
   &:active {
     filter: none;
   }

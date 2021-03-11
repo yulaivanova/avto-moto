@@ -67,10 +67,6 @@
   }
 }
 
-.fieldset__rating label:hover::before {
-  opacity: 0.5;
-}
-
 .fieldset__rating label:focus::before {
   color: $btn-red-hvr;
   opacity: 0.8;
@@ -121,6 +117,7 @@
 .fieldset__rating > input:checked ~ label:hover ~ label,
 .fieldset__rating > label:hover ~ input:checked ~ label {
   color: $btn-color;
+  text-shadow: 1px 1px 1px rgba(221, 12, 33, 0.5), 1px 1px 1px rgba(221, 12, 33, 0.5);
 }
 
 .fieldset__rating > label:active {

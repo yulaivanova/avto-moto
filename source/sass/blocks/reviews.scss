@@ -9,7 +9,7 @@
 }
 
 .reviews__item {
-  padding: 20px 0 18px;
+  padding: 20px 0 10px;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -68,12 +68,19 @@
 }
 
 .reviews__comment h3 {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  padding-bottom: 5px;
+
+  margin: 0;
+
   @media (max-width: $tablet-width) {
     display: none;
   }
 }
 
-.reviews__item h2 {
+.reviews__item p:first-child {
   font-weight: 600;
   font-size: 20px;
   line-height: 27px;
@@ -89,7 +96,7 @@
   }
 }
 
-.reviews__title {
+.reviews__features h3 {
   font-weight: 600;
   font-size: 15px;
   line-height: 20px;
@@ -99,7 +106,7 @@
   padding-bottom: 5px;
 }
 
-.reviews__title::before {
+.reviews__features h3::before {
   position: absolute;
   left: 0;
 
@@ -110,11 +117,11 @@
   color: $btn-color;
 }
 
-.reviews__title--pros::before {
+.reviews__features--pros h3::before {
   content: "+";
 }
 
-.reviews__title--cons::before {
+.reviews__features--cons h3::before {
   content: "–";
 }
 
@@ -134,7 +141,7 @@
   padding-top: 29px;
 }
 
-.reviews__date p {
+.reviews__date p:first-child {
   font-size: 14px;
   line-height: 19px;
 

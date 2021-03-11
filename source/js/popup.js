@@ -108,7 +108,7 @@
       localStorage.setItem('pros', PROS.value);
       localStorage.setItem('cons', CONS.value);
       localStorage.setItem('comment', COMMENT.value);
-      localStorage.setItem('raitingValue', ratingValue);
+      localStorage.setItem('raiting', ratingValue);
     }
 
     window.review.generate(FORM.elements, ratingValue);

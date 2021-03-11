@@ -14,8 +14,8 @@
   const PROS = document.querySelector('#pros');
   const CONS = document.querySelector('#cons');
   const RATING = document.querySelector('.fieldset__rating');
-  const RAITING_INPUT = document.querySelectorAll('.fieldset__rating input');
-  const RAITING_LABEL = document.querySelectorAll('.fieldset__rating label');
+  const RATING_INPUT = document.querySelectorAll('.fieldset__rating input');
+  const RATING_LABEL = document.querySelectorAll('.fieldset__rating label');
   const REVIEWS_BTN = document.querySelector('.reviews__button');
   const ERROR_INPUT_MSG = document.querySelector('.fieldset__input-error');
 
@@ -49,9 +49,9 @@
       COMMENT.value = window.storage.comment;
     }
 
-    let value = +window.storage.raitingValue;
+    let value = +window.storage.rating;
 
-    RAITING_INPUT.forEach(item => {
+    RATING_INPUT.forEach(item => {
       if (+item.value === value) {
         item.checked = true;
       }
@@ -100,15 +100,15 @@
 
   FORM.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    let checkedRaitingElements = createCheckedArray(RATING.elements);
-    let ratingValue = checkedRaitingElements[0];
+    let checkedRatingElements = createCheckedArray(RATING.elements);
+    let ratingValue = checkedRatingElements[0];
 
     if (window.storage.isSupport) {
       localStorage.setItem('userName', USER_NAME.value);
       localStorage.setItem('pros', PROS.value);
       localStorage.setItem('cons', CONS.value);
       localStorage.setItem('comment', COMMENT.value);
-      localStorage.setItem('raiting', ratingValue);
+      localStorage.setItem('rating', ratingValue);
     }
 
     window.review.generate(FORM.elements, ratingValue);
@@ -118,13 +118,13 @@
   POPUP.addEventListener('click', onOverlayClick);
   POPUP.addEventListener('click', onToggleClick);
 
-  RAITING_LABEL.forEach(item => {
+  RATING_LABEL.forEach(item => {
     item.addEventListener('keydown', function (evt) {
       if (evt.key === ENTER_KEY) {
-        let dataRaiting = item.dataset.raiting;
+        let dataRating = item.dataset.rating;
 
-        RAITING_INPUT.forEach(input => {
-          if (input.id === dataRaiting) {
+        RATING_INPUT.forEach(input => {
+          if (input.id === dataRating) {
             input.checked = true;
           }
         });

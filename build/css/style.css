@@ -1438,6 +1438,7 @@ template {
       position: relative;
       padding: 45px 16px 40px; } }
 
+.popup--nojs h1,
 .popup__wrapper h2 {
   font-weight: 600;
   font-size: 25px;
@@ -1446,6 +1447,7 @@ template {
   padding-bottom: 47px;
   text-align: center; }
   @media (max-width: 767px) {
+    .popup--nojs h1,
     .popup__wrapper h2 {
       padding-bottom: 38px; } }
 

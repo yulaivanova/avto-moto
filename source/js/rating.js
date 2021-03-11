@@ -4,11 +4,11 @@
 'use strict';
 
 (function () {
-  const MAX_RAITING = 5;
+  const MAX_RATING = 5;
 
   const generateRating = function (ratingValue) {
     let ratingElem = '';
-    for (let i = 0; i < MAX_RAITING; i++) {
+    for (let i = 0; i < MAX_RATING; i++) {
       if (i < ratingValue) {
         ratingElem += `<span class="rating__active"></span>`;
       } else {

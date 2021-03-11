@@ -30,15 +30,20 @@
 }
 
 .fieldset__rating {
-  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
 
   border: none;
+  outline: none;
 
   padding: 7px 0 0 0;
   margin-bottom: 29px;
   margin-left: 0;
 
   @media (max-width: $mobile-width) {
+    flex-wrap: wrap;
     margin: 25px auto 32px;
     width: 167px;
   }
@@ -51,7 +56,7 @@
 
   color: #000000;
 
-  padding-right: 0;
+  padding-right: 5px;
 
   order: 1;
 
@@ -59,17 +64,20 @@
 
   @media (max-width: $mobile-width) {
     display: block;
+    width: 100%;
 
     padding-right: 0;
     padding-bottom: 10px;
 
     text-align: center;
+
+    order: 0;
   }
 }
 
 .fieldset__rating label:focus::before {
   color: $btn-red-hvr;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .fieldset__rating:not(:checked) > input {
@@ -77,9 +85,6 @@
 }
 
 .fieldset__rating:not(:checked) > label {
-  float: right;
-
-  margin-right: 10px;
   padding: 0;
 
   cursor: pointer;
@@ -97,27 +102,28 @@
   }
 }
 
-.fieldset__rating:not(:checked) > label::before {
+.fieldset__rating > label::before {
   content: "★";
-}
-
-.fieldset__rating > input:checked ~ label {
+  position: absolute;
+  opacity: 0;
   color: $btn-color;
 }
 
-.fieldset__rating:not(:checked) > label:hover,
-.fieldset__rating:not(:checked) > label:focus ~ label,
-.fieldset__rating:not(:checked) > label:hover ~ label {
-  color: $btn-color;
+.fieldset__rating > label:hover::before,
+.fieldset__rating > label:hover ~ label::before {
+  opacity: 1 !important;
 }
 
-.fieldset__rating > input:checked + label:hover,
-.fieldset__rating > input:checked + label:hover ~ label,
-.fieldset__rating > input:checked ~ label:hover,
-.fieldset__rating > input:checked ~ label:hover ~ label,
-.fieldset__rating > label:hover ~ input:checked ~ label {
-  color: $btn-color;
-  text-shadow: 1px 1px 1px rgba(221, 12, 33, 0.5), 1px 1px 1px rgba(221, 12, 33, 0.5);
+.fieldset__rating > label:focus ~ label::before {
+  opacity: 1;
+}
+
+.fieldset__rating > input:checked ~ label::before {
+  opacity: 1;
+}
+
+.fieldset__rating:hover > input:checked ~ label::before {
+  opacity: 0;
 }
 
 .fieldset__rating > label:active {
@@ -126,6 +132,7 @@
 
 .fieldset__rating > label:focus {
   outline: none;
+  opacity: 0.8;
 }
 
 .fieldset__field input,

@@ -11,7 +11,7 @@ var csso = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
-var svgstore = require("gulp-svgstore")
+var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
@@ -100,13 +100,13 @@ gulp.task("clean", function () {
 });
 
 gulp.task("vendor-scripts", function () {
-  return gulp.src(["source/js/swiper-bundle.min.js"])
+  return gulp.src(["source/js/swiper-bundle.js"])
     .pipe(concat("vendor.js"))
     .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("main-scripts", function () {
-  return gulp.src(["source/js/menu.js", "source/js/map.js", "source/js/slider.js", "source/js/tabs.js", "source/js/popup.js", "source/js/storage.js", "source/js/review.js"])
+  return gulp.src(["source/js/menu.js", "source/js/map.js", "source/js/slider.js", "source/js/tabs.js", "source/js/popup.js", "source/js/storage.js", "source/js/review.js", "source/js/rating.js"])
     .pipe(concat("main.js"))
     .pipe(gulp.dest("build/js"));
 });

@@ -29,7 +29,7 @@
         item.dataset.tabName === tabName ? item.classList.add('tabs-nav__item--is-active') : item.classList.remove('tabs-nav__item--is-active')
       });
       selectTabContent(tabName);
-    };
+    }
 
     function selectTabNav() {
       TAB_NAV.forEach(item => {
@@ -38,7 +38,7 @@
       this.classList.add('tabs-nav__item--is-active');
       tabName = this.getAttribute('data-tab-name');
       selectTabContent(tabName);
-    };
+    }
 
     function selectTabContent(tabName) {
       TAB_CONTENT.forEach(item => {

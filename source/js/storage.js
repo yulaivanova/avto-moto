@@ -27,7 +27,7 @@
     cons: storageCons,
     pros: storagePros,
     comment: storageComment,
-    raitingValue: storageRaitng,
+    raiting: storageRaitng,
   };
 
 })();

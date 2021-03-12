@@ -111,7 +111,7 @@
 
 .fieldset__rating > label:hover::before,
 .fieldset__rating > label:hover ~ label::before {
-  opacity: 1 !important;
+  opacity: 1 !important; // Без данного important правило для 'fieldset__rating:hover > input:checked ~ label::before opacity:0 ' переопределило бы другие в соответствии со специфичностью и применило прозрачную заливку ко всему. Таким образом, цвет звездочки ни будет меняться при наведении, если уже выбран какой-то рейтинг и пользователь хочет выбрать рейтинг меньше.
 }
 
 .fieldset__rating > label:focus ~ label::before {

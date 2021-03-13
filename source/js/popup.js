@@ -16,6 +16,8 @@
   const RATING = document.querySelector('.fieldset__rating');
   const RATING_INPUT = document.querySelectorAll('.fieldset__rating input');
   const RATING_LABEL = document.querySelectorAll('.fieldset__rating label');
+  const FIELDSET_NAME = document.querySelector('.fieldset__field--name');
+  const FIELDSET_COMMENT = document.querySelector('.fieldset__field--comment');
   const REVIEWS_BTN = document.querySelector('.reviews__button');
   const ERROR_INPUT_MSG = document.querySelector('.fieldset__input-error');
 
@@ -92,14 +94,26 @@
   };
 
   USER_NAME.addEventListener('change', function () {
-    ERROR_INPUT_MSG.classList.add('fieldset__input-error--show');
+    let ERROR_MSG = FIELDSET_NAME.firstElementChild;
+    ERROR_MSG.classList.add('fieldset__input-error--show');
+    FIELDSET_NAME.classList.add('fieldset__field--invalid');
     if (USER_NAME.validity.valid) {
-      ERROR_INPUT_MSG.classList.remove('fieldset__input-error--show');
+      ERROR_MSG.classList.remove('fieldset__input-error--show');
+      FIELDSET_NAME.classList.remove('fieldset__field--invalid');
+    }
+  }, false);
+
+  COMMENT.addEventListener('change', function () {
+    let ERROR_MSG = FIELDSET_COMMENT.firstElementChild;
+    ERROR_MSG.classList.add('fieldset__input-error--show');
+    FIELDSET_COMMENT.classList.add('fieldset__field--invalid');
+    if (COMMENT.validity.valid) {
+      ERROR_MSG.classList.remove('fieldset__input-error--show');
+      FIELDSET_COMMENT.classList.remove('fieldset__field--invalid');
     }
   }, false);
 
   FORM.addEventListener('submit', function (evt) {
-    evt.preventDefault();
     let checkedRatingElements = createCheckedArray(RATING.elements);
     let ratingValue = checkedRatingElements[0];
 
@@ -112,6 +126,7 @@
     }
 
     window.review.generate(FORM.elements, ratingValue);
+    evt.preventDefault();
     closePopup();
   });
 

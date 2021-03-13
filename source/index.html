@@ -222,7 +222,7 @@
                 </ul>
                 <div class="contacts__map" id="map">
                   <span class="visually-hidden">Карта</span>
-                  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e8de7724-4389-4305-9e95-dcaf82fd0420"></script>
+                  <script src="https://api-maps.yandex.ru/2.1?apikey=e8de7724-4389-4305-9e95-dcaf82fd0420&load=package.full&lang=ru_RU&onload=init"></script>
                 </div>
               </div>
             </div>
@@ -236,7 +236,7 @@
           <form action="#">
             <fieldset class="popup__fieldset fieldset">
               <div class="fieldset__column">
-                <div class="fieldset__field">
+                <div class="fieldset__field fieldset__field--name">
                   <span class="fieldset__input-error">Пожалуйста, заполните поле</span>
                   <label for="name" class="visually-hidden">Оставьте ваше имя</label>
                   <input type="text" name="name" placeholder="Имя" minlength="2" id="name" tabindex="1" required>
@@ -264,7 +264,7 @@
                   <input type="radio" id="star-1" name="rating" value="1">
                   <label for="star-1" title="Оценка «1»" tabindex="5" data-rating="star-1">★<span class="visually-hidden">Оценка «1»</span></label>
                 </fieldset>
-                <div class="fieldset__field">
+                <div class="fieldset__field fieldset__field--comment">
                   <span class="fieldset__input-error">Пожалуйста, заполните поле</span>
                   <label for="comment" class="visually-hidden">Оставьте ваш комментарий</label>
                   <textarea id="comment" rows="4" placeholder="Комментарий" tabindex="10" minlength="10" tabindex="10" required></textarea>

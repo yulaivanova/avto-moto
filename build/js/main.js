@@ -23,35 +23,32 @@
 
 })();
 
-(function () {
-    ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-      center: [59.968137, 30.316263],
-      zoom: 16
+function init(ymaps) {
+  var myMap = new ymaps.Map('map', {
+    center: [59.968137, 30.316263],
+    zoom: 16
+  }, {
+    searchControlProvider: 'yandex#search'
+  }),
+
+    myPlacemark = new ymaps.Placemark([59.968137, 30.316263], {
+      balloonContent: 'Avto moto'
     }, {
-      searchControlProvider: 'yandex#search'
-    }),
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#image',
+      // Своё изображение иконки метки.
+      iconImageHref: 'img/map-pin.png',
+      // Размеры метки.
+      iconImageSize: [32, 40],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-20, -45]
+    });
 
-      myPlacemark = new ymaps.Placemark([59.968137, 30.316263], {
-        balloonContent: 'Avto moto'
-      }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        iconImageHref: 'img/map-pin.png',
-        // Размеры метки.
-        iconImageSize: [32, 40],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-20, -45]
-      });
-
-    myMap.geoObjects
-      .add(myPlacemark);
-  });
-
-})();
+  myMap.geoObjects
+    .add(myPlacemark);
+};
 
 'use strict';
 (function () {
@@ -149,6 +146,8 @@
   const RATING = document.querySelector('.fieldset__rating');
   const RATING_INPUT = document.querySelectorAll('.fieldset__rating input');
   const RATING_LABEL = document.querySelectorAll('.fieldset__rating label');
+  const FIELDSET_NAME = document.querySelector('.fieldset__field--name');
+  const FIELDSET_COMMENT = document.querySelector('.fieldset__field--comment');
   const REVIEWS_BTN = document.querySelector('.reviews__button');
   const ERROR_INPUT_MSG = document.querySelector('.fieldset__input-error');
 
@@ -225,14 +224,26 @@
   };
 
   USER_NAME.addEventListener('change', function () {
-    ERROR_INPUT_MSG.classList.add('fieldset__input-error--show');
+    let ERROR_MSG = FIELDSET_NAME.firstElementChild;
+    ERROR_MSG.classList.add('fieldset__input-error--show');
+    FIELDSET_NAME.classList.add('fieldset__field--invalid');
     if (USER_NAME.validity.valid) {
-      ERROR_INPUT_MSG.classList.remove('fieldset__input-error--show');
+      ERROR_MSG.classList.remove('fieldset__input-error--show');
+      FIELDSET_NAME.classList.remove('fieldset__field--invalid');
+    }
+  }, false);
+
+  COMMENT.addEventListener('change', function () {
+    let ERROR_MSG = FIELDSET_COMMENT.firstElementChild;
+    ERROR_MSG.classList.add('fieldset__input-error--show');
+    FIELDSET_COMMENT.classList.add('fieldset__field--invalid');
+    if (COMMENT.validity.valid) {
+      ERROR_MSG.classList.remove('fieldset__input-error--show');
+      FIELDSET_COMMENT.classList.remove('fieldset__field--invalid');
     }
   }, false);
 
   FORM.addEventListener('submit', function (evt) {
-    evt.preventDefault();
     let checkedRatingElements = createCheckedArray(RATING.elements);
     let ratingValue = checkedRatingElements[0];
 
@@ -245,6 +256,7 @@
     }
 
     window.review.generate(FORM.elements, ratingValue);
+    evt.preventDefault();
     closePopup();
   });
 
@@ -382,5 +394,22 @@
   window.rating = {
     generate: generateRating,
   };
+
+})();
+
+/*  eslint no-var: "error"  */
+/*  eslint-env es6  */
+
+'use strict';
+
+(function () {
+
+  Modernizr.on('webp', function (result) {
+    if (result) {
+      // supported
+    } else {
+      // not-supported
+    }
+  });
 
 })();

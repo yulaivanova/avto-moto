@@ -153,10 +153,11 @@
     line-height: 19px;
     color: #48494d;
   }
+}
 
-  &:invalid {
-    border: 1px solid #ff0000;
-  }
+.fieldset__field--invalid input,
+.fieldset__field--invalid textarea {
+  border: 1px solid #ff0000;
 }
 
 .fieldset__field textarea {
@@ -186,4 +187,30 @@
 
 .fieldset__input-error--show {
   display: block;
+}
+
+.fieldset__field--comment,
+.fieldset__field--name {
+  position: relative;
+}
+
+.fieldset__field--comment::before,
+.fieldset__field--name::before {
+  content: "*";
+  color: #d12136;
+  font-size: 17px;
+  line-height: 20px;
+  font-family: "Arial", sans-serif;
+
+  position: absolute;
+  left: 12px;
+  z-index: 99;
+}
+
+.fieldset__field--name::before {
+  bottom: 20px;
+}
+
+.fieldset__field--comment::before {
+  bottom: 91px;
 }
